@@ -34,9 +34,6 @@ function App() {
   
   <Items name = {response[2].itemName}  />
   <ItemDate day = {response[2].mfgDate} month = {response[2].mfgMonth} year = {response[2].mfgYear} />
-    <div className="App">
-     Hello World
-    </div>
   </>
   
   );
