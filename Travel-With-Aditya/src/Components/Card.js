@@ -7,7 +7,7 @@ function Card({id,image,info,price,name,removeTour}){
     }
     return(
         <div className="card">
-            <img src= {image} className="img"/>
+            <img src= {image} className="img" alt={name}/>
             <div className="tour-details">
                 <h4 className="tour-price">{price}</h4>
                 <h4 className="tour-name">{name}</h4>
@@ -16,7 +16,7 @@ function Card({id,image,info,price,name,removeTour}){
                 <span className="read-more" onClick={readmoreHandler}>{readmore ? 'show less' : 'read more'}</span>
             </div>
             <button className="btn-handler" onClick={() => removeTour(id)}>
-                Not Intrested 
+                Not Interested 
             </button>
 
         </div>
