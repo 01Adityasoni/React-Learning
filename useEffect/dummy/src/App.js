@@ -17,19 +17,19 @@ function App() {
   // },[]);
 
    // variation 3 =>    whenever dependency changes when text changes
-//  useEffect(()=>{
-  //   console.log('useEffect called');
-  // },[name]);
+  useEffect(()=>{
+     console.log('useEffect called');
+   },[name]);
     
-// variation 4 => to handle unamounting of a component , cleaning up 
-useEffect( ()=> {
-  console.log("listner added ");
+// variation 4 => to handle unmounting of a component , cleaning up 
+//useEffect( ()=> {
+  //console.log("listner added ");
 
-  return () => {
-    console.log("listner removed")
-  }
+  //return () => {
+    //console.log("listner removed")
+  //}
 
-},[text]);
+//},[text]);
 
   function changeHandler(event){ 
     console.log(text);
