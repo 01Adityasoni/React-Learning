@@ -14,6 +14,7 @@ function App() {
       <nav>
         <ul>
           <li>
+            {/* <Link to="/">Home</Link> in place of link we use navlink because it allows us to apply active styles automatically */} 
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
@@ -29,6 +30,7 @@ function App() {
       </nav>
 
   <Routes>
+    {/* Nested Routes  here we make a parent route and inside it there is child route */}
    <Route path="/" element={<MainHeader/>}>
    <Route index element={<Home/>} />
    <Route path="/about" element={<About/>} />
