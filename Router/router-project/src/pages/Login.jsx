@@ -1,8 +1,19 @@
-const Login = () => {
+import Template from "../Components/Template";
+import loginImg from "../assets/login.png";
+
+
+
+const Login = ({setIsLoggedIn}) => {
   return (
-    <div>   
-        <h1>This is Login Page</h1>
-    </div>
+  <Template
+    title="Welcome Back"
+    desc1="Build skills for today, tomorrow, and beyond."
+    desc2="Education to future-proof your career."
+    image={loginImg}
+    formtype="login"
+    setIsLoggedIn={setIsLoggedIn}
+  />
+
     )
 }
 export default Login;
