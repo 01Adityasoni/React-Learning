@@ -8,13 +8,13 @@ const Navbar = (props) => {
     let setIsLoggedIn = props.setIsLoggedIn;
     
     return (
-        <div className='flex justify-evenly'>
+        <div className='flex justify-between item-center w-11/12 max-w-[1160px] py-4 mx-auto'>
             <Link to="/">
             <img src={logo} alt="logo" width={160} height={32} loading="lazy"/>
             </Link>
 
             <nav>
-                <ul className='flex gap-3'>
+                <ul className='flex gap-x-6 text-white'>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -28,15 +28,15 @@ const Navbar = (props) => {
             </nav>
 
             {/*login - signup - logout - dashboard */}
-            <div className="flex ml-3 mr-3 gap-3">
+            <div className="flex items-center gap-x-4">
                 {!isLoggedIn && 
                 <Link to="/login">
-                <button>Login</button>
+                <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700">Login</button>
                 </Link>
                 }
                 { !isLoggedIn &&
                 <Link to="/signup">
-                <button>Signup</button>
+                <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700">Signup</button>
                 </Link>
                 }
                 { isLoggedIn &&
@@ -44,12 +44,12 @@ const Navbar = (props) => {
                 <button onClick={() => {
                     setIsLoggedIn(false);
                     toast.success("Logged out Successfully");
-                }}>Logout</button>
+                }} className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700">Logout</button>
                 </Link>
                 }
                 {isLoggedIn &&
                 <Link to="/Dashboard">
-                <button>Dashboard</button>
+                <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px] border border-richblack-700">Dashboard</button>
                 </Link>
                 }
 
