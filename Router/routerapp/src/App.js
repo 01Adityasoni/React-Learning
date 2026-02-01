@@ -29,7 +29,7 @@ function App() {
         </ul>
       </nav>
 
-  <Routes>
+  <Routes>                      
     {/* Nested Routes  here we make a parent route and inside it there is child route */}
    <Route path="/" element={<MainHeader/>}>
    <Route index element={<Home/>} />
