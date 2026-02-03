@@ -17,7 +17,7 @@ useEffect(() => {
   // fetch initial blogs data on component mount
   fetchBlogsData();
 
-}, []);
+}, []);              
 
 
   return (
